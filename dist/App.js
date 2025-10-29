@@ -25,6 +25,7 @@ class App {
         this.app.use(express_1.default.urlencoded({ extended: true }));
     }
     listen() {
+        console.log("Railway PORT:", process.env.PORT);
         this.app.listen(this.port, () => {
             console.log(`Server is running on port ${this.port}`);
         });
