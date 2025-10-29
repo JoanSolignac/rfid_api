@@ -25,9 +25,11 @@ export  class App {
     }
 
 
-    public listen(): void{
+    public listen(): void {
+        console.log("Railway PORT:", process.env.PORT);
         this.app.listen(this.port, () => {
             console.log(`Server is running on port ${this.port}`);
         });
     }
+
 }
