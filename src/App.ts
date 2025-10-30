@@ -26,9 +26,10 @@ export  class App {
 
 
     public listen(): void {
+        const host: string = "0.0.0.0";
         console.log("Railway PORT:", process.env.PORT);
-        this.app.listen(this.port, () => {
-            console.log(`Server is running on port ${this.port}`);
+        this.app.listen(this.port, host, () => {
+            console.log(`Server is running on http://${host}:${this.port}`);
         });
     }
 
